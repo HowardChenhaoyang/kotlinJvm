@@ -1,0 +1,3 @@
+package classfile
+
+class AttributeInfo
