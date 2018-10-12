@@ -35,21 +35,44 @@ fun ClassFile.read(classReader: ClassReader) {
 
 fun ClassFile.readAndCheckMagic(classReader: ClassReader) {
     val magic = classReader.readU4()
-    assert(magic == 0x00000000CAFEBABE){
+    assert(magic == 0x00000000CAFEBABE) {
         "java.lang.ClassFormatError: magic!"
     }
 }
 
 fun ClassFile.readAndCheckVersion(classReader: ClassReader) {
-
+    val minorVersion = classReader.readU2()
+    val majorVersion = classReader.readU2()
+    when (majorVersion) {
+        45 -> return
+        in 46..52 -> {
+            if (minorVersion == 0) {
+                return
+            }
+        }
+    }
+    assert(false) {
+        "java.lang.UnsupportedClassVersionError!"
+    }
 }
 
-fun readConstantPool(classReader: ClassReader): ConstantPool {
-
-}
 
 fun readMembers(classReader: ClassReader, constantPool: ConstantPool): Array<MemberInfo>? {
+    val memberCount = classReader.readU2()
+    if (memberCount == 0) {
+        return null
+    }
+    return (0..memberCount).map {
+        readMember(classReader, constantPool)
+    }.toTypedArray()
+}
 
+fun readMember(classReader: ClassReader, constantPool: ConstantPool): MemberInfo = MemberInfo().apply {
+    this.constantPool = constantPool
+    this.accessFlags = classReader.readU2()
+    this.nameIndex = classReader.readU2()
+    this.descriptorIndex = classReader.readU2()
+    this.attributes = readAttributes(classReader, constantPool)
 }
 
 fun readAttributes(classReader: ClassReader, constantPool: ConstantPool): Array<AttributeInfo>? {
