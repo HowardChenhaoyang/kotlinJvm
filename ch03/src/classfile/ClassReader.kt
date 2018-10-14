@@ -3,7 +3,7 @@ package classfile
 
 class ClassReader {
 
-    lateinit var data: Array<Byte>
+    lateinit var data: ByteArray
 
     fun readU1(): Short {
         val value = data[0]
@@ -34,15 +34,15 @@ class ClassReader {
     }
 
 
-    fun readU2s(): Array<Int> {
+    fun readU2s(): IntArray {
         val length = readU2()
         val nums = (0 until length).map {
             readU2()
         }
-        return nums.toTypedArray()
+        return nums.toIntArray()
     }
 
-    fun readBytes(n: Int): Array<Byte> {
+    fun readBytes(n: Int): ByteArray {
         val bytes = data.copyOfRange(0, n)
         data = data.copyOfRange(1, data.size)
         return bytes

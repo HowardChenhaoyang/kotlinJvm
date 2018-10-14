@@ -1,3 +1,4 @@
+import classfile.*
 import classpath.ClassPath
 
 fun main(args: Array<String>) {
@@ -13,6 +14,29 @@ fun main(args: Array<String>) {
 
 fun startJVM(cmd: Cmd) {
     val result = ClassPath.parse(cmd).readClass(cmd.clazz!!)
-    println("size is "+ result.bytes.size)
-    println(result.bytes.toList())
+    val classFile = ClassFile.parse(result.bytes)
+    println("size is " + result.bytes.size)
+    printClassInfo(classFile)
+}
+
+fun printClassInfo(classfile: ClassFile) {
+    println("version: ${classfile.majorVersion}.${classfile.minorVersion}")
+    println("constants count: ${classfile.constantPool.size}")
+    println("access flags: ${classfile.accessFlags}")
+    println("this class: ${classfile.className()}")
+    println("super class: ${classfile.superClassName()}")
+    println("interfaces: ${classfile.interfaceNames()}")
+    println("fields count: ${classfile.fields?.size ?: 0}")
+    if (classfile.fields != null) {
+        for (field in classfile.fields!!) {
+            println(" ${field.name}")
+        }
+    }
+
+    println("methods count: ${classfile.methods?.size ?: 0}")
+    if (classfile.methods != null) {
+        for (method in classfile.methods!!) {
+            println(" ${method.name}")
+        }
+    }
 }

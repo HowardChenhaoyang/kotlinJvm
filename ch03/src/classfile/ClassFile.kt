@@ -3,21 +3,23 @@ package classfile
 class ClassFile {
     var minorVersion: Int? = null
     var majorVersion: Int? = null
-    var constantPool: ConstantPool? = null
+    lateinit var constantPool: ConstantPool
     var accessFlags: Int? = null
     var thisClass: Int? = null
     var superClass: Int? = null
-    var interfaces: Array<Int>? = null
+    var interfaces: IntArray? = null
     var fields: Array<MemberInfo>? = null
     var methods: Array<MemberInfo>? = null
     var attributes: Array<AttributeInfo>? = null
-}
 
-fun parse(data: Array<Byte>): ClassFile {
-    val classReader = ClassReader().apply { this.data = data }
-    val classFile = ClassFile()
-    classFile.read(classReader)
-    return classFile
+    companion object {
+        fun parse(data: ByteArray): ClassFile {
+            val classReader = ClassReader().apply { this.data = data }
+            val classFile = ClassFile()
+            classFile.read(classReader)
+            return classFile
+        }
+    }
 }
 
 fun ClassFile.read(classReader: ClassReader) {
@@ -30,7 +32,7 @@ fun ClassFile.read(classReader: ClassReader) {
     interfaces = classReader.readU2s()
     fields = readMembers(classReader, constantPool!!)
     methods = readMembers(classReader, constantPool!!)
-    attributes = readAttributes(classReader, constantPool!!)
+    attributes = AttributeInfo.readAttributes(classReader, constantPool!!)
 }
 
 fun ClassFile.readAndCheckMagic(classReader: ClassReader) {
@@ -72,11 +74,7 @@ fun readMember(classReader: ClassReader, constantPool: ConstantPool): MemberInfo
     this.accessFlags = classReader.readU2()
     this.nameIndex = classReader.readU2()
     this.descriptorIndex = classReader.readU2()
-    this.attributes = readAttributes(classReader, constantPool)
-}
-
-fun readAttributes(classReader: ClassReader, constantPool: ConstantPool): Array<AttributeInfo>? {
-
+    this.attributes = AttributeInfo.readAttributes(classReader, constantPool)
 }
 
 fun ClassFile.className(): String {
