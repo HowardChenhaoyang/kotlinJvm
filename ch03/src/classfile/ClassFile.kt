@@ -1,5 +1,25 @@
 package classfile
 
+/*
+ClassFile {
+    u4             magic;
+    u2             minor_version;
+    u2             major_version;
+    u2             constant_pool_count;
+    cp_info        constant_pool[constant_pool_count-1];
+    u2             access_flags;
+    u2             this_class;
+    u2             super_class;
+    u2             interfaces_count;
+    u2             interfaces[interfaces_count];
+    u2             fields_count;
+    field_info     fields[fields_count];
+    u2             methods_count;
+    method_info    methods[methods_count];
+    u2             attributes_count;
+    attribute_info attributes[attributes_count];
+}
+*/
 class ClassFile {
     var minorVersion: Int? = null
     var majorVersion: Int? = null
@@ -30,19 +50,19 @@ fun ClassFile.read(classReader: ClassReader) {
     thisClass = classReader.readU2()
     superClass = classReader.readU2()
     interfaces = classReader.readU2s()
-    fields = readMembers(classReader, constantPool!!)
-    methods = readMembers(classReader, constantPool!!)
-    attributes = AttributeInfo.readAttributes(classReader, constantPool!!)
+    fields = readMembers(classReader, constantPool)
+    methods = readMembers(classReader, constantPool)
+    attributes = AttributeInfo.readAttributes(classReader, constantPool)
 }
 
-fun ClassFile.readAndCheckMagic(classReader: ClassReader) {
+private fun readAndCheckMagic(classReader: ClassReader) {
     val magic = classReader.readU4()
     assert(magic == 0x00000000CAFEBABE) {
         "java.lang.ClassFormatError: magic!"
     }
 }
 
-fun ClassFile.readAndCheckVersion(classReader: ClassReader) {
+private fun readAndCheckVersion(classReader: ClassReader) {
     val minorVersion = classReader.readU2()
     val majorVersion = classReader.readU2()
     when (majorVersion) {
@@ -53,9 +73,7 @@ fun ClassFile.readAndCheckVersion(classReader: ClassReader) {
             }
         }
     }
-    assert(false) {
-        "java.lang.UnsupportedClassVersionError!"
-    }
+    throw UnsupportedClassVersionError()
 }
 
 
@@ -78,16 +96,16 @@ fun readMember(classReader: ClassReader, constantPool: ConstantPool): MemberInfo
 }
 
 fun ClassFile.className(): String {
-    return constantPool!!.getClassName(thisClass!!)
+    return constantPool.getClassName(thisClass!!)
 }
 
 fun ClassFile.superClassName(): String {
     if (superClass != null && superClass!! > 0) {
-        return constantPool!!.getClassName(superClass!!)
+        return constantPool.getClassName(superClass!!)
     }
     return ""
 }
 
 fun ClassFile.interfaceNames(): Array<String>? {
-    return interfaces?.map { constantPool!!.getClassName(it) }?.toTypedArray()
+    return interfaces?.map { constantPool.getClassName(it) }?.toTypedArray()
 }

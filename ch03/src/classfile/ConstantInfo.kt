@@ -2,6 +2,12 @@ package classfile
 
 import java.io.UTFDataFormatException
 
+/*
+cp_info {
+    u1 tag;
+    u1 info[];
+}
+*/
 sealed class ConstantInfo {
     abstract fun readInfo(classReader: ClassReader)
 
@@ -13,7 +19,7 @@ sealed class ConstantInfo {
             return constantInfo
         }
 
-        fun newConstantInfo(tag: Short, constantPool: ConstantPool): ConstantInfo =
+        private fun newConstantInfo(tag: Short, constantPool: ConstantPool): ConstantInfo =
                 when (tag) {
                     ConstantInvokeDynamicInfo.tag -> ConstantInvokeDynamicInfo()
                     ConstantMethodHandleInfo.TAG -> ConstantMethodHandleInfo()
@@ -35,10 +41,19 @@ sealed class ConstantInfo {
     }
 }
 
-
+/*
+CONSTANT_InvokeDynamic_info {
+    u1 tag;
+    u2 bootstrap_method_attr_index;
+    u2 name_and_type_index;
+}
+*/
 class ConstantInvokeDynamicInfo : ConstantInfo() {
+    var bootstrapMethodAttrIndex: Int = -1
+    var nameAndTypeIndex: Int = -1
     override fun readInfo(classReader: ClassReader) {
-
+        bootstrapMethodAttrIndex = classReader.readU2()
+        nameAndTypeIndex = classReader.readU2()
     }
 
     companion object {
@@ -47,9 +62,19 @@ class ConstantInvokeDynamicInfo : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_MethodHandle_info {
+    u1 tag;
+    u1 reference_kind;
+    u2 reference_index;
+}
+*/
 class ConstantMethodHandleInfo : ConstantInfo() {
+    var referenceKind:Short = 0  // 取值范围为0-9
+    var referenceIndex:Int =  -1
     override fun readInfo(classReader: ClassReader) {
-
+        referenceKind = classReader.readU1()
+        referenceIndex = classReader.readU2()
     }
 
     companion object {
@@ -57,9 +82,16 @@ class ConstantMethodHandleInfo : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_MethodType_info {
+    u1 tag;
+    u2 descriptor_index;
+}
+*/
 class ConstantMethodTypeInfo : ConstantInfo() {
+    var descriptorIndex:Int = -1
     override fun readInfo(classReader: ClassReader) {
-
+        descriptorIndex = classReader.readU2()
     }
 
     companion object {
@@ -67,6 +99,13 @@ class ConstantMethodTypeInfo : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_NameAndType_info {
+    u1 tag;
+    u2 name_index;
+    u2 descriptor_index;
+}
+*/
 class ConstantNameAndTypeInfo : ConstantInfo() {
     var nameIndex: Int = -1
     var descriptorIndex: Int = -1
@@ -81,6 +120,16 @@ class ConstantNameAndTypeInfo : ConstantInfo() {
     }
 }
 
+
+
+/*
+*
+* CONSTANT_InterfaceMethodref_info {
+    u1 tag;
+    u2 class_index;
+    u2 name_and_type_index;
+}
+* */
 class ConstantInterfaceMethodrefInfo(override var constantPool: ConstantPool) : ConstantInfo(), ConstantMemberrefInfo {
 
     override var classIndex: Int = -1
@@ -96,6 +145,15 @@ class ConstantInterfaceMethodrefInfo(override var constantPool: ConstantPool) : 
     }
 }
 
+/*
+*
+* CONSTANT_Methodref_info {
+    u1 tag;
+    u2 class_index;
+    u2 name_and_type_index;
+}
+*
+* */
 class ConstantMethodrefInfo(override var constantPool: ConstantPool) : ConstantInfo(), ConstantMemberrefInfo {
     override var classIndex: Int = -1
 
@@ -111,6 +169,15 @@ class ConstantMethodrefInfo(override var constantPool: ConstantPool) : ConstantI
     }
 }
 
+
+/*
+*
+* CONSTANT_Fieldref_info {
+    u1 tag;
+    u2 class_index;
+    u2 name_and_type_index;
+}
+* */
 class ConstantFieldrefInfo(override var constantPool: ConstantPool) : ConstantInfo(), ConstantMemberrefInfo {
 
     override var classIndex: Int = -1
@@ -127,6 +194,13 @@ class ConstantFieldrefInfo(override var constantPool: ConstantPool) : ConstantIn
     }
 }
 
+
+/*
+CONSTANT_Class_info {
+    u1 tag;
+    u2 name_index;
+}
+*/
 class ConstantClassInfo(private val constantPool: ConstantPool) : ConstantInfo() {
     var nameIndex: Int = -1
     val name: String
@@ -141,6 +215,13 @@ class ConstantClassInfo(private val constantPool: ConstantPool) : ConstantInfo()
     }
 }
 
+
+/*
+CONSTANT_String_info {
+    u1 tag;
+    u2 string_index;
+}
+*/
 class ConstantStringInfo(private val constantPool: ConstantPool) : ConstantInfo() {
     var stringIndex: Int = -1
 
@@ -156,6 +237,13 @@ class ConstantStringInfo(private val constantPool: ConstantPool) : ConstantInfo(
     }
 }
 
+/*
+CONSTANT_Utf8_info {
+    u1 tag;
+    u2 length;
+    u1 bytes[length];
+}
+*/
 class ConstantUtf8Info : ConstantInfo() {
     lateinit var value: String
     override fun readInfo(classReader: ClassReader) {
@@ -229,6 +317,13 @@ class ConstantUtf8Info : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_Double_info {
+    u1 tag;
+    u4 high_bytes;
+    u4 low_bytes;
+}
+*/
 class ConstantDoubleInfo : ConstantInfo() {
     var high: Long = 0
     var low: Long = 0
@@ -242,6 +337,12 @@ class ConstantDoubleInfo : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_Float_info {
+    u1 tag;
+    u4 bytes;
+}
+*/
 class ConstantFloatInfo : ConstantInfo() {
     var value: Long = 0
     override fun readInfo(classReader: ClassReader) {
@@ -253,6 +354,12 @@ class ConstantFloatInfo : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_Integer_info {
+    u1 tag;
+    u4 bytes;
+}
+*/
 class ConstantIntegerInfo : ConstantInfo() {
     var value: Long = 0
     override fun readInfo(classReader: ClassReader) {
@@ -264,6 +371,13 @@ class ConstantIntegerInfo : ConstantInfo() {
     }
 }
 
+/*
+CONSTANT_Long_info {
+    u1 tag;
+    u4 high_bytes;
+    u4 low_bytes;
+}
+*/
 class ConstantLongInfo : ConstantInfo() {
     var high: Long = 0
     var low: Long = 0
