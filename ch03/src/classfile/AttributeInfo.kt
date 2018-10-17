@@ -37,6 +37,24 @@ sealed class AttributeInfo {
     }
 }
 
+/*
+Code_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 max_stack;
+    u2 max_locals;
+    u4 code_length;
+    u1 code[code_length];
+    u2 exception_table_length;
+    {   u2 start_pc;
+        u2 end_pc;
+        u2 handler_pc;
+        u2 catch_type;
+    } exception_table[exception_table_length];
+    u2 attributes_count;
+    attribute_info attributes[attributes_count];
+}
+*/
 class CodeAttribute(private val constantPool: ConstantPool) : AttributeInfo() {
     var maxStack: Int = 0
     var maxLocals: Int = 0
@@ -58,6 +76,14 @@ class CodeAttribute(private val constantPool: ConstantPool) : AttributeInfo() {
     }
 }
 
+/*
+ConstantValue_attribute {
+u2 attribute_name_index;
+u4 attribute_length;
+u2 constantvalue_index;
+}
+*/
+// 只出现在field_info结构中
 class ConstantValueAttribute : AttributeInfo() {
     var constantValueIndex: Int = -1
     override fun readInfo(classReader: ClassReader) {
@@ -69,11 +95,16 @@ class ConstantValueAttribute : AttributeInfo() {
     }
 }
 
+
+/*
+Deprecated_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+}
+*/
 class DeprecatedAttribute : AttributeInfo() {
-    var nameIndex: Int = -1
 
     override fun readInfo(classReader: ClassReader) {
-        nameIndex = classReader.readU2()
     }
 
     companion object {
@@ -121,8 +152,6 @@ class LocalVeriableTableAttribute : AttributeInfo() {
 
 
 class SourceFileAttribute(private val constantPool: ConstantPool) : AttributeInfo() {
-    var nameIndex: Int = -1
-    var attrLength: Long = -1 // 该值必须为2
     var sourceFileIndex: Int = -1
     val fileName: String
         get() = constantPool.getUtf8(sourceFileIndex)
@@ -137,11 +166,16 @@ class SourceFileAttribute(private val constantPool: ConstantPool) : AttributeInf
 }
 
 
+
+/*
+Synthetic_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+}
+*/
 class SyntheticAttribute : AttributeInfo() {
-    var nameIndex: Int = -1
 
     override fun readInfo(classReader: ClassReader) {
-        nameIndex = classReader.readU2()
     }
 
     companion object {
