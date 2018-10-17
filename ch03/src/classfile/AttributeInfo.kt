@@ -31,6 +31,9 @@ sealed class AttributeInfo {
                     LocalVeriableTableAttribute.NAME -> LocalVeriableTableAttribute()
                     SourceFileAttribute.NAME -> SourceFileAttribute(constantPool)
                     SyntheticAttribute.NAME -> SyntheticAttribute()
+                    SignatureAttribute.NAME -> SignatureAttribute(constantPool)
+                    LocalVariableTypeTableAttribute.NAME -> LocalVariableTypeTableAttribute()
+                    InnerClassesAttribute.NAME -> InnerClassesAttribute()
                     else -> UnparsedAttribute(attrName, attrLen)
                 }
 
@@ -112,6 +115,15 @@ class DeprecatedAttribute : AttributeInfo() {
     }
 }
 
+/*
+Exceptions_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 number_of_exceptions;
+    u2 exception_index_table[number_of_exceptions];
+}
+*/
+// 方法抛出的异常属性
 class ExceptionsAttribute : AttributeInfo() {
     var exceptionIndexTable: IntArray? = null
     override fun readInfo(classReader: ClassReader) {
@@ -140,9 +152,33 @@ class LineNumberTableAttribute : AttributeInfo() {
     }
 }
 
-class LocalVeriableTableAttribute : AttributeInfo() {
-    override fun readInfo(classReader: ClassReader) {
 
+/*
+LocalVariableTable_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 local_variable_table_length;
+    {   u2 start_pc;
+        u2 length;
+        u2 name_index;
+        u2 descriptor_index;
+        u2 index;
+    } local_variable_table[local_variable_table_length];
+}
+*/
+class LocalVeriableTableAttribute : AttributeInfo() {
+    var localVariableTable: Array<LocalVariableTableEntry>? = null
+    override fun readInfo(classReader: ClassReader) {
+        val localVariableTableLength = classReader.readU2()
+        localVariableTable = (0 until localVariableTableLength).map {
+            LocalVariableTableEntry().apply {
+                startPc = classReader.readU2()
+                length = classReader.readU2()
+                nameIndex = classReader.readU2()
+                descriptorIndex = classReader.readU2()
+                index = classReader.readU2()
+            }
+        }.toTypedArray()
     }
 
     companion object {
@@ -166,7 +202,6 @@ class SourceFileAttribute(private val constantPool: ConstantPool) : AttributeInf
 }
 
 
-
 /*
 Synthetic_attribute {
     u2 attribute_name_index;
@@ -187,5 +222,70 @@ class UnparsedAttribute(private val name: String, private val length: Long) : At
     var info: ByteArray? = null
     override fun readInfo(classReader: ClassReader) {
         info = classReader.readBytes(length.toInt())
+    }
+}
+
+
+class SignatureAttribute(private val constantPool: ConstantPool) : AttributeInfo() {
+    var signatureIndex: Int = -1
+    val signature: String
+        get() = constantPool.getUtf8(signatureIndex)
+
+    override fun readInfo(classReader: ClassReader) {
+        signatureIndex = classReader.readU2()
+    }
+
+    companion object {
+        const val NAME = "Signature"
+    }
+}
+
+class LocalVariableTypeTableAttribute : AttributeInfo() {
+    var localVariableTypeTable: Array<LocalVariableTypeTableEntry>? = null
+    override fun readInfo(classReader: ClassReader) {
+        val localVariableTypeTableLength = classReader.readU2()
+        localVariableTypeTable = (0 until localVariableTypeTableLength).map {
+            LocalVariableTypeTableEntry().apply {
+                startPc = classReader.readU2()
+                length = classReader.readU2()
+                nameIndex = classReader.readU2()
+                signatureIndex = classReader.readU2()
+                index = classReader.readU2()
+            }
+        }.toTypedArray()
+    }
+    companion object {
+        const val NAME = "LocalVariableTypeTable"
+    }
+}
+
+
+
+/*
+InnerClasses_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 number_of_classes;
+    {   u2 inner_class_info_index;
+        u2 outer_class_info_index;
+        u2 inner_name_index;
+        u2 inner_class_access_flags;
+    } classes[number_of_classes];
+}
+*/
+class InnerClassesAttribute:AttributeInfo() {
+    override fun readInfo(classReader: ClassReader) {
+        val numberOfClasses = classReader.readU2()
+        (0 until numberOfClasses).map {
+            InnerClassInfo().apply {
+                innerClassInfoIndex = classReader.readU2()
+                outerClassInfoIndex = classReader.readU2()
+                innerNameIndex = classReader.readU2()
+                innerClassAccessFlags = classReader.readU2()
+            }
+        }
+    }
+    companion object {
+        const val NAME = "InnerClasses"
     }
 }
