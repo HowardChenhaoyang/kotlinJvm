@@ -34,6 +34,8 @@ sealed class AttributeInfo {
                     SignatureAttribute.NAME -> SignatureAttribute(constantPool)
                     LocalVariableTypeTableAttribute.NAME -> LocalVariableTypeTableAttribute()
                     InnerClassesAttribute.NAME -> InnerClassesAttribute()
+                    EnclosingMethodAttribute.NAME -> EnclosingMethodAttribute(constantPool)
+                    BootstrapMethodsAttribute.NAME -> BootstrapMethodsAttribute()
                     else -> UnparsedAttribute(attrName, attrLen)
                 }
 
@@ -254,11 +256,11 @@ class LocalVariableTypeTableAttribute : AttributeInfo() {
             }
         }.toTypedArray()
     }
+
     companion object {
         const val NAME = "LocalVariableTypeTable"
     }
 }
-
 
 
 /*
@@ -273,7 +275,7 @@ InnerClasses_attribute {
     } classes[number_of_classes];
 }
 */
-class InnerClassesAttribute:AttributeInfo() {
+class InnerClassesAttribute : AttributeInfo() {
     override fun readInfo(classReader: ClassReader) {
         val numberOfClasses = classReader.readU2()
         (0 until numberOfClasses).map {
@@ -285,7 +287,55 @@ class InnerClassesAttribute:AttributeInfo() {
             }
         }
     }
+
     companion object {
         const val NAME = "InnerClasses"
+    }
+}
+
+
+/*
+EnclosingMethod_attribute {
+    u2 attribute_name_index;
+    u4 attribute_length;
+    u2 class_index;
+    u2 method_index;
+}
+*/
+class EnclosingMethodAttribute(private val constantPool: ConstantPool) : AttributeInfo() {
+    var classIndex: Int = -1
+    var methodIndex: Int = -1
+
+    val className: String
+        get() = constantPool.getClassName(classIndex)
+
+    val methodNameAndDescriptor: NameAndType
+        get() = constantPool.getNameAndType(methodIndex)
+
+    override fun readInfo(classReader: ClassReader) {
+        classIndex = classReader.readU2()
+        methodIndex = classReader.readU2()
+    }
+
+    companion object {
+        const val NAME = "EnclosingMethod"
+    }
+}
+
+
+class BootstrapMethodsAttribute : AttributeInfo() {
+    var bootstrapMethods: Array<BootstrapMethod>? = null
+    override fun readInfo(classReader: ClassReader) {
+        val numBootstrapMethods = classReader.readU2()
+        bootstrapMethods = (0 until numBootstrapMethods).map {
+            BootstrapMethod().apply {
+                bootstrapMethodRef = classReader.readU2()
+                bootstrapArguments = classReader.readU2s()
+            }
+        }.toTypedArray()
+    }
+
+    companion object {
+        const val NAME = "BootstrapMethods"
     }
 }
