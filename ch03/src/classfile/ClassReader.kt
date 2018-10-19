@@ -1,5 +1,7 @@
 package classfile
 
+import kotlin.experimental.and
+
 
 class ClassReader {
 
@@ -27,9 +29,10 @@ class ClassReader {
         var num = 0L
         for (byte in u4bytes) {
             num = num shl 8
-            num = num or byte.toLong()
+            num = num or (byte and 0xff.toByte()).toLong()
         }
         data = data.copyOfRange(4, data.size)
+        return num
         return num
     }
 

@@ -36,6 +36,9 @@ class ClassFile {
         fun parse(data: ByteArray): ClassFile {
             val classReader = ClassReader().apply { this.data = data }
             val classFile = ClassFile()
+            data.forEach {
+                println(it)
+            }
             classFile.read(classReader)
             return classFile
         }
@@ -57,8 +60,8 @@ fun ClassFile.read(classReader: ClassReader) {
 
 private fun readAndCheckMagic(classReader: ClassReader) {
     val magic = classReader.readU4()
-    assert(magic == 0x00000000CAFEBABE) {
-        "java.lang.ClassFormatError: magic!"
+    if (magic != 0x00000000CAFEBABE) {
+        throw ClassFormatError("magic!")
     }
 }
 
