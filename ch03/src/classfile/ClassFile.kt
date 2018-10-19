@@ -36,9 +36,6 @@ class ClassFile {
         fun parse(data: ByteArray): ClassFile {
             val classReader = ClassReader().apply { this.data = data }
             val classFile = ClassFile()
-            data.forEach {
-                println(it)
-            }
             classFile.read(classReader)
             return classFile
         }

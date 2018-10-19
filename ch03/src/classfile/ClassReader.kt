@@ -1,6 +1,5 @@
 package classfile
 
-import kotlin.experimental.and
 
 
 class ClassReader {
@@ -14,13 +13,13 @@ class ClassReader {
     }
 
     fun readU2(): Int {
-        val u2bytes = arrayOf(data[0], data[1])
+        val u2bytes = data.copyOfRange(0, 2)
         var num = 0
         for (byte in u2bytes) {
             num = num shl 8
-            num = num or byte.toInt()
+            num = num or (byte.toInt() and 0xff)
         }
-        data = data.copyOfRange(1, data.size)
+        data = data.copyOfRange(2, data.size)
         return num
     }
 
@@ -29,10 +28,9 @@ class ClassReader {
         var num = 0L
         for (byte in u4bytes) {
             num = num shl 8
-            num = num or (byte and 0xff.toByte()).toLong()
+            num = num or (byte.toInt() and 0xff).toLong()
         }
         data = data.copyOfRange(4, data.size)
-        return num
         return num
     }
 
