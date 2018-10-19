@@ -9,7 +9,7 @@ class ClassReader {
     fun readU1(): Short {
         val value = data[0]
         data = data.copyOfRange(1, data.size)
-        return value.toShort()
+        return (value.toInt() and 0xff).toShort()
     }
 
     fun readU2(): Int {
@@ -45,7 +45,7 @@ class ClassReader {
 
     fun readBytes(n: Int): ByteArray {
         val bytes = data.copyOfRange(0, n)
-        data = data.copyOfRange(1, data.size)
+        data = data.copyOfRange(n, data.size)
         return bytes
     }
 }

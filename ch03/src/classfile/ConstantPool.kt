@@ -7,7 +7,9 @@ fun readConstantPool(classReader: ClassReader): ConstantPool {
     val constantPool = ConstantPool(constantPoolCount) { null }
     loop@ for (i in 1 until constantPoolCount) {
         when (constantPool[i - 1]) {
-            is ConstantLongInfo, is ConstantDoubleInfo -> continue@loop
+            is ConstantLongInfo, is ConstantDoubleInfo -> {
+                continue@loop
+            }
         }
         constantPool[i] = ConstantInfo.readConstantInfo(classReader, constantPool)
     }

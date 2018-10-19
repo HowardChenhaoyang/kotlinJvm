@@ -21,7 +21,7 @@ sealed class ConstantInfo {
 
         private fun newConstantInfo(tag: Short, constantPool: ConstantPool): ConstantInfo =
                 when (tag) {
-                    ConstantInvokeDynamicInfo.tag -> ConstantInvokeDynamicInfo()
+                    ConstantInvokeDynamicInfo.TAG -> ConstantInvokeDynamicInfo()
                     ConstantMethodHandleInfo.TAG -> ConstantMethodHandleInfo()
                     ConstantMethodTypeInfo.TAG -> ConstantMethodTypeInfo()
                     ConstantNameAndTypeInfo.TAG -> ConstantNameAndTypeInfo()
@@ -35,7 +35,9 @@ sealed class ConstantInfo {
                     ConstantFloatInfo.TAG -> ConstantFloatInfo()
                     ConstantIntegerInfo.TAG -> ConstantIntegerInfo()
                     ConstantLongInfo.TAG -> ConstantLongInfo()
-                    else -> throw ClassFormatError("constant pool tag!")
+                    else -> {
+                        throw ClassFormatError("constant pool tag!")
+                    }
                 }
 
     }
@@ -57,7 +59,7 @@ class ConstantInvokeDynamicInfo : ConstantInfo() {
     }
 
     companion object {
-        val tag: Short
+        val TAG: Short
             get() = 18
     }
 }

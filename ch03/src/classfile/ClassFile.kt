@@ -82,7 +82,7 @@ fun readMembers(classReader: ClassReader, constantPool: ConstantPool): Array<Mem
     if (memberCount == 0) {
         return null
     }
-    return (0..memberCount).map {
+    return (0 until memberCount).map {
         readMember(classReader, constantPool)
     }.toTypedArray()
 }
