@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="commons-cli-1.4 (7)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ch04/libs/commons-cli-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ch04/libs/commons-cli-1.4-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/ch04/libs/commons-cli-1.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ch04/libs/commons-cli-1.4-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
