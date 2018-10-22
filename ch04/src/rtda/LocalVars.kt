@@ -36,6 +36,14 @@ fun LocalVars.getLong(index: Int): Long {
     return (high shl 32) or low
 }
 
-fun setDouble(index: Int, value: Double) {
-    val bits = value.toBits()
+fun LocalVars.setDouble(index: Int, value: Double) {
+    setLong(index, value.toBits())
 }
+
+fun LocalVars.getDouble(index: Int): Double = Double.fromBits(getLong(index))
+
+fun LocalVars.setRef(index: Int, ref: Any) {
+    this[index].ref = ref
+}
+
+fun LocalVars.getRef(index: Int) = this[index].ref!!
