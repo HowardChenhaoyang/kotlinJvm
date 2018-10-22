@@ -23,13 +23,19 @@ fun LocalVars.setFloat(index: Int, value: Float) {
     this[index].num = value.toBits()
 }
 
-fun LocalVars.getFloat(index: Int): Float = this[index].num!!.toByte().toFloat()
+fun LocalVars.getFloat(index: Int): Float = Float.fromBits(this[index].num!!)
 
 fun LocalVars.setLong(index: Int, value: Long) {
     this[index].num = value.toInt()
     this[index + 1].num = (value shr 32).toInt()
 }
 
-fun setDouble(index: Int,value:Double){
+fun LocalVars.getLong(index: Int): Long {
+    val low = this[index].num!!.toLong()
+    val high = this[index + 1].num!!.toLong()
+    return (high shl 32) or low
+}
+
+fun setDouble(index: Int, value: Double) {
     val bits = value.toBits()
 }
