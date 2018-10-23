@@ -32,11 +32,39 @@ fun OperandStack.pushFloat(value: Float) {
 }
 
 
-fun OperandStack.popFloat():Float{
+fun OperandStack.popFloat(): Float {
     size--
     return Float.fromBits(slots[size].num!!)
 }
 
-fun OperandStack.pushLong(){
+fun OperandStack.pushLong(value: Long) {
+    slots[size].num = value.toInt()
+    slots[size + 1].num = (value shr 32).toInt()
+    size += 2
+}
 
+fun OperandStack.popLong(): Long {
+    size -= 2
+    val low = slots[size].num!!.toLong() and 0xffffffff
+    val high = slots[size + 1].num!!.toLong()
+    return (high shl 32) or low
+}
+
+fun OperandStack.pushDouble(double: Double) {
+    pushLong(double.toBits())
+}
+
+fun OperandStack.popDouble(): Double = Double.fromBits(popLong())
+
+
+fun OperandStack.pushRef(ref: Any?) {
+    slots[size].ref = ref
+    size++
+}
+
+fun OperandStack.popRef(): Any? {
+    size--
+    val ref = slots[size].ref
+    slots[size].ref = null
+    return ref
 }
