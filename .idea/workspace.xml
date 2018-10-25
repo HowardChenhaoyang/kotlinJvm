@@ -8,45 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22257f7-66b8-40a9-972c-4ef03ec33809" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__7_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_cli_1_4__8_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/ch05.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/libs/commons-cli-1.4-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/libs/commons-cli-1.4-test-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/libs/commons-cli-1.4-tests.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/libs/commons-cli-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/Cmd.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/AttributeInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/BootstrapMethod.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/ClassFile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/ClassReader.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/ConstantInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/ConstantMemberrefInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/ConstantPool.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/ExceptionTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/InnerClassInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/LineNumberTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/LocalVariableTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/LocalVariableTypeTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/MemberInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classfile/NameAndType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/ClassPath.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/CompositeEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/DirEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/Entry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/EntryFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/WildCardEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/classpath/ZipEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/rtda/Frame.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/rtda/LocalVars.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/rtda/OperandStack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/rtda/Slot.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/rtda/Stack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/src/rtda/Thread.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/src/instructions/base/BranchInstruction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/src/instructions/base/NoOperandsInstruction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/src/rtda/Frame.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/src/rtda/Frame.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/src/instructions/base/Instruction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/src/instructions/base/Instruction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/src/instructions/wqw.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,16 +25,16 @@
     <session id="970581530">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.closed" value="22" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -79,27 +45,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="2" />
-          <entry key="kt" value="33" />
+          <entry key="java" value="5" />
+          <entry key="kt" value="38" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="2" />
-          <entry key="Kotlin" value="33" />
+          <entry key="JAVA" value="5" />
+          <entry key="Kotlin" value="38" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="4773" />
+          <entry key="kt" value="5564" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="4773" />
+          <entry key="Kotlin" value="5564" />
         </counts>
       </usages-collector>
     </session>
@@ -107,55 +73,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch04/src/main.kt">
+        <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/Instruction.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="90">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch04/src/rtda/Thread.kt">
+        <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/NoOperandsInstruction.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="75">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ch04/src/rtda/Frame.kt">
+        <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/BranchInstruction.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch04/src/rtda/OperandStack.kt">
+        <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/BytecodeReader.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch04/src/classfile/ClassReader.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch04/src/rtda/LocalVars.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="43">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -165,6 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
+        <option value="Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -226,6 +176,10 @@
         <option value="$PROJECT_DIR$/ch04/src/main.kt" />
         <option value="$PROJECT_DIR$/ch04/src/rtda/OperandStack.kt" />
         <option value="$PROJECT_DIR$/ch04/src/rtda/Frame.kt" />
+        <option value="$PROJECT_DIR$/ch05/src/instructions/base/BytecodeReader.kt" />
+        <option value="$PROJECT_DIR$/ch05/src/instructions/base/Instruction.kt" />
+        <option value="$PROJECT_DIR$/ch05/src/instructions/base/NoOperandsInstruction.kt" />
+        <option value="$PROJECT_DIR$/ch05/src/instructions/base/BranchInstruction.kt" />
       </list>
     </option>
   </component>
@@ -236,8 +190,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="542" />
-    <option name="y" value="105" />
+    <option name="x" value="743" />
+    <option name="y" value="64" />
     <option name="width" value="1261" />
     <option name="height" value="797" />
   </component>
@@ -258,11 +212,6 @@
             <path>
               <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
               <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -273,19 +222,51 @@
             </path>
             <path>
               <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch05" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch05" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="kotlinJvm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="ch05" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="ch05" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540274838116" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540520305919" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -473,10 +454,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="542" y="105" width="1261" height="797" extended-state="0" />
+    <frame x="743" y="64" width="1261" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19278097" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12551272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -492,7 +473,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932332" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32965517" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32624114" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -502,7 +483,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983378" />
-      <window_info anchor="right" id="Kotlin Bytecode" order="8" weight="0.3287891" />
+      <window_info anchor="right" id="Kotlin Bytecode" order="8" weight="0.32813781" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2423447" />
@@ -540,6 +521,32 @@
     <module name="ch03" />
     <module name="ch04" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -567,43 +574,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ch02/src/classpath/EntryFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/util/Preconditions.kt" />
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/io/FileReadWrite.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/jvm/JvmClassMapping.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
-    <entry file="file://$PROJECT_DIR$/ch02/src/classpath/DirEntry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch02/src/classpath/WildCardEntry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch02/src/classpath/CompositeEntry.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -816,17 +786,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch04/src/rtda/Thread.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch04/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch04/src/rtda/Thread.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -855,6 +825,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/package-info.java" />
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="933" lean-forward="true" selection-start-line="933" selection-end-line="933" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/wqw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/BytecodeReader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/Instruction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/NoOperandsInstruction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/base/BranchInstruction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
