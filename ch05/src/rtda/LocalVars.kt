@@ -17,7 +17,7 @@ fun LocalVars.setInt(index: Int, value: Int) {
     this[index].num = value
 }
 
-fun LocalVars.getInt(index: Int) = this[index].num
+fun LocalVars.getInt(index: Int):Int = this[index].num!!
 
 fun LocalVars.setFloat(index: Int, value: Float) {
     this[index].num = value.toBits()
