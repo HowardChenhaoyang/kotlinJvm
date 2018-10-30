@@ -3,7 +3,6 @@ package instructions.stores
 import instructions.base.Index8Instruction
 import instructions.base.NoOperandsInstruction
 import rtda.Frame
-import rtda.popRef
 import rtda.setRef
 
 class AStore : Index8Instruction() {

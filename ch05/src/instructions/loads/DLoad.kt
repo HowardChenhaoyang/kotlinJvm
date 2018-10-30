@@ -4,7 +4,6 @@ import instructions.base.Index8Instruction
 import instructions.base.NoOperandsInstruction
 import rtda.Frame
 import rtda.getDouble
-import rtda.pushDouble
 
 class DLoad : Index8Instruction() {
     override fun execute(frame: Frame) {

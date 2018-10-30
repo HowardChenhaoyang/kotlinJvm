@@ -4,7 +4,6 @@ import instructions.base.Index8Instruction
 import instructions.base.NoOperandsInstruction
 import rtda.Frame
 import rtda.getRef
-import rtda.pushRef
 
 class ALoad : Index8Instruction() {
     override fun execute(frame: Frame) {

@@ -4,7 +4,7 @@ import instructions.base.Index8Instruction
 import instructions.base.NoOperandsInstruction
 import rtda.Frame
 import rtda.getFloat
-import rtda.pushFloat
+
 
 class FLoad : Index8Instruction() {
     override fun execute(frame: Frame) {
