@@ -6,6 +6,18 @@ class MemberInfo {
     var nameIndex: Int? = null
     var descriptorIndex: Int? = null
     var attributes: Array<AttributeInfo>? = null
+
+    fun codeAttribute(): CodeAttribute? {
+        attributes ?: return null
+        for (attribute in attributes!!) {
+            when (attribute) {
+                is CodeAttribute -> {
+                    return attribute
+                }
+            }
+        }
+        return null
+    }
 }
 
 val MemberInfo.name: String

@@ -1,7 +1,7 @@
 package rtda
 
 class Thread {
-    val pc: Int = -1
+    var pc: Int = -1
     lateinit var stack: Stack
 
     fun pushFrame(frame: Frame) {
