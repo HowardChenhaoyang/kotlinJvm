@@ -1,11 +1,84 @@
 package instructions
 
 import instructions.base.Instruction
+import instructions.constants.*
+import instructions.loads.*
+import instructions.stores.*
 
 class InstructionFactory {
     companion object {
         fun newInstruction(opCode: Int) :Instruction{
-
+            return when(opCode){
+                0x00 -> Nop()
+                0x01 -> AConstNull()
+                0x02 -> IConstM1()
+                0x03 -> IConst0()
+                0x04 -> IConst1()
+                0x05 -> IConst2()
+                0x06 -> IConst3()
+                0x07 -> IConst4()
+                0x08 -> IConst5()
+                0x09 -> LConst0()
+                0x0a -> LConst1()
+                0x0b -> FConst0()
+                0x0c -> FConst1()
+                0x0d -> FConst2()
+                0x0e -> DConst0()
+                0x0f -> DConst1()
+                0x10 -> BIPush()
+                0x11 -> SIPush()
+                0x15 -> ILoad()
+                0x16 -> LLoad()
+                0x17 -> FLoad()
+                0x18 -> DLoad()
+                0x19 -> ALoad()
+                0x1a -> ILoad0()
+                0x1b -> ILoad1()
+                0x1c -> ILoad2()
+                0x1d -> ILoad3()
+                0x1e -> LLoad0()
+                0x1f -> LLoad1()
+                0x20 -> LLoad2()
+                0x21 -> LLoad3()
+                0x22 -> FLoad0()
+                0x23 -> FLoad1()
+                0x24 -> FLoad2()
+                0x25 -> FLoad3()
+                0x26 -> DLoad0()
+                0x27 -> DLoad1()
+                0x28 -> DLoad2()
+                0x29 -> DLoad3()
+                0x2a -> ALoad0()
+                0x2b -> ALoad1()
+                0x2c -> ALoad2()
+                0x2d -> ALoad3()
+                0x36 -> IStore()
+                0x37 -> LStore()
+                0x38 -> FStore()
+                0x39 -> DStore()
+                0x3a -> AStore()
+                0x3b -> IStore0()
+                0x3c -> IStore1()
+                0x3d -> IStore2()
+                0x3e -> IStore3()
+                0x3f -> LStore0()
+                0x40 -> LStore1()
+                0x41 -> LStore2()
+                0x42 -> LStore3()
+                0x43 -> FStore0()
+                0x44 -> FStore1()
+                0x45 -> FStore2()
+                0x46 -> FStore3()
+                0x47 -> DStore0()
+                0x48 -> DStore1()
+                0x49 -> DStore2()
+                0x4a -> DStore3()
+                0x4b -> AStore0()
+                0x4c -> AStore1()
+                0x4d -> AStore2()
+                0x4e -> AStore3()
+                else -> throw RuntimeException("Unsupported opcode: $opCode")
+            }
         }
     }
 }
