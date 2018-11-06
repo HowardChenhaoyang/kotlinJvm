@@ -1,8 +1,19 @@
 package instructions
 
 import instructions.base.Instruction
+import instructions.comparisons.*
 import instructions.constants.*
+import instructions.control.Goto
+import instructions.control.LookUpSwitch
+import instructions.control.TableSwitch
+import instructions.conversions.*
+import instructions.extended.GotoW
+import instructions.extended.IfNonNull
+import instructions.extended.IfNull
+import instructions.extended.Wide
 import instructions.loads.*
+import instructions.math.*
+import instructions.stack.*
 import instructions.stores.*
 
 class InstructionFactory {
@@ -77,6 +88,92 @@ class InstructionFactory {
                 0x4c -> AStore1()
                 0x4d -> AStore2()
                 0x4e -> AStore3()
+                0x57 -> Pop()
+                0x58 -> Pop2()
+                0x59 -> Dup()
+                0x5a -> DupX1()
+                0x5b -> DupX2()
+                0x5c -> Dup2()
+                0x5d -> Dup2X1()
+                0x5e -> Dup2X2()
+                0x5f -> Swap()
+                0x60 -> IAdd()
+                0x61 -> LAdd()
+                0x62 -> FAdd()
+                0x63 -> DAdd()
+                0x64 -> ISub()
+                0x65 -> LSub()
+                0x66 -> FSub()
+                0x67 -> DSub()
+                0x68 -> IMul()
+                0x69 -> LMul()
+                0x6a -> FMul()
+                0x6b -> DMul()
+                0x6c -> IDiv()
+                0x6d -> LDiv()
+                0x6e -> FDiv()
+                0x6f -> DDiv()
+                0x70 -> IRem()
+                0x71 -> LRem()
+                0x72 -> FRem()
+                0x73 -> DRem()
+                0x74 -> INeg()
+                0x75 -> LNeg()
+                0x76 -> FNeg()
+                0x77 -> DNeg()
+                0x78 -> IShl()
+                0x79 -> LShl()
+                0x7a -> IShr()
+                0x7b -> LShr()
+                0x7c -> IUShr()
+                0x7d -> LUShr()
+                0x7e -> IAnd()
+                0x7f -> LAnd()
+                0x80 -> IOr()
+                0x81 -> LOr()
+                0x82 -> IXor()
+                0x83 -> LXor()
+                0x84 -> IInc()
+                0x85 -> I2L()
+                0x86 -> I2F()
+                0x87 -> I2D()
+                0x88 -> L2I()
+                0x89 -> L2F()
+                0x8a -> L2D()
+                0x8b -> F2I()
+                0x8c -> F2L()
+                0x8d -> F2D()
+                0x8f -> D2L()
+                0x90 -> D2F()
+                0x91 -> I2B()
+                0x92 -> I2C()
+                0x93 -> I2S()
+                0x94 -> LCmp()
+                0x95 -> FCmpl()
+                0x96 -> FCmpg()
+                0x97 -> FCmpg()
+                0x98 -> DCmpg()
+                0x99 -> IFeq()
+                0x9a -> IFne()
+                0x9b -> IFlt()
+                0x9c -> IFge()
+                0x9d -> IFgt()
+                0x9e -> IFle()
+                0x9f -> IfICmpEq()
+                0xa0 -> IfICmpNe()
+                0xa1 -> IfICmpLt()
+                0xa2 -> IfICmpGe()
+                0xa3 -> IfICmpGt()
+                0xa4 -> IfICmpLe()
+                0xa5 -> IfAcmpEq()
+                0xa6 -> IfAcmpNe()
+                0xa7 -> Goto()
+                0xaa -> TableSwitch()
+                0xab -> LookUpSwitch()
+                0xc4 -> Wide()
+                0xc6 -> IfNull()
+                0xc7 -> IfNonNull()
+                0xc8 -> GotoW()
                 else -> throw RuntimeException("Unsupported opcode: $opCode")
             }
         }

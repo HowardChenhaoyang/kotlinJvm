@@ -12,7 +12,7 @@ class IShl : NoOperandsInstruction() {
         stack.pushInt(result)
     }
 }
-class IShR : NoOperandsInstruction() {
+class IShr : NoOperandsInstruction() {
     override fun execute(frame: Frame) {
         val stack = frame.operandStack!!
         val value2 = stack.popInt() and 0x1f

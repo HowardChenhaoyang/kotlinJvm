@@ -71,7 +71,7 @@ bottom -> top
                V  V
 [...][c][b][a][b][a]
 */
-class DUP2 : NoOperandsInstruction() {
+class Dup2 : NoOperandsInstruction() {
     override fun execute(frame: Frame) {
         val stack = frame.operandStack
         val slot1 = stack!!.popSlot()
@@ -92,7 +92,7 @@ bottom -> top
       V  V
 [...][b][a][c][b][a]
 */
-class DUP2X1 : NoOperandsInstruction() {
+class Dup2X1 : NoOperandsInstruction() {
     override fun execute(frame: Frame) {
         val stack = frame.operandStack
         val slot1 = stack!!.popSlot()
@@ -114,7 +114,7 @@ bottom -> top
       V  V
 [...][b][a][d][c][b][a]
 */
-class DUP2X2 : NoOperandsInstruction() {
+class Dup2X2 : NoOperandsInstruction() {
     override fun execute(frame: Frame) {
         val stack = frame.operandStack
         val slot1 = stack!!.popSlot()

@@ -4,7 +4,7 @@ import instructions.base.BranchInstruction
 import instructions.base.branch
 import rtda.Frame
 
-class IfAcmp : BranchInstruction() {
+class IfAcmpEq : BranchInstruction() {
     override fun execute(frame: Frame) {
         if (acmp(frame)) {
             branch(frame, offset)
