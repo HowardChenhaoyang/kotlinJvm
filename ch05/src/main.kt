@@ -1,4 +1,8 @@
-import rtda.*
+import classfile.ClassFile
+import classfile.MemberInfo
+import classfile.descriptor
+import classfile.name
+import classpath.ClassPath
 
 fun main(args: Array<String>) {
     val cmd = Cmd.parseCmd(args)
@@ -12,41 +16,18 @@ fun main(args: Array<String>) {
 }
 
 fun startJVM(cmd: Cmd) {
-    val frame = Frame.newFrame(100, 100)
-//    testLocalVars(frame.localVars!!)
-    testOperandStack(frame.operandStack!!)
+    val result = ClassPath.parse(cmd).readClass(cmd.clazz!!)
+    val classFile = ClassFile.parse(result.bytes)
+    val mainMethodMemberInfo = getMainMethod(classFile)?:return
+    Interpreter.interpret(mainMethodMemberInfo)
 }
 
-fun testOperandStack(operandStack: OperandStack) {
-    operandStack.pushInt(100)
-    operandStack.pushInt(-100)
-    operandStack.pushLong(2997924580)
-    operandStack.pushLong(-2997924580)
-    operandStack.pushFloat(3.1415926f)
-    operandStack.pushDouble(2.71828182845)
-    operandStack.pushRef(null)
-    println(operandStack.popRef())
-    println(operandStack.popDouble())
-    println(operandStack.popFloat())
-    println(operandStack.popLong())
-    println(operandStack.popLong())
-    println(operandStack.popInt())
-    println(operandStack.popInt())
-}
-
-fun testLocalVars(localVars: LocalVars) {
-    localVars.setInt(0, 100)
-    localVars.setInt(1, -100)
-    localVars.setLong(2, 2997924580)
-    localVars.setLong(4, -2997924580)
-    localVars.setFloat(6, 3.141592f)
-    localVars.setDouble(7, 2.71828182845)
-    localVars.setRef(9, null)
-    println(localVars.getInt(0))
-    println(localVars.getInt(1))
-    println(localVars.getLong(2))
-    println(localVars.getLong(4))
-    println(localVars.getFloat(6))
-    println(localVars.getDouble(7))
-    println(localVars.getRef(9))
+private fun getMainMethod(classFile: ClassFile): MemberInfo? {
+    val methods = classFile.methods ?: return null
+    for (method in methods) {
+        if (method.name == "main" && method.descriptor == "([Ljava/lang/String;)V") {
+            return method
+        }
+    }
+    return null
 }

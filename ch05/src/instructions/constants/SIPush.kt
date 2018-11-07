@@ -3,7 +3,6 @@ package instructions.constants
 import instructions.base.BytecodeReader
 import instructions.base.Instruction
 import rtda.Frame
-import rtda.pushInt
 
 class SIPush:Instruction{
     private var value:Int = -1

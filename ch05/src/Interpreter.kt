@@ -14,7 +14,16 @@ class Interpreter {
             val thread = Thread.newThread()
             val frame = Frame.newFrame(thread, maxLocals, maxStack)
             thread.pushFrame(frame)
-            loop(thread, byteCode!!)
+            try {
+                loop(thread, byteCode!!)
+            } catch (e: Exception) {
+                for (localVar in frame.localVars!!) {
+                    println("localVars ${localVar.num}")
+                }
+                for (slot in frame.operandStack?.slots!!) {
+                    println("operandStack ${slot.num}")
+                }
+            }
         }
 
         private fun loop(thread: Thread, byteCode: ByteArray) {

@@ -49,6 +49,6 @@ class BytecodeReader {
     }
 
     fun skipPadding() {
-        while (0 !== pc % 4) readUint8()
+        while (0 != pc % 4) readUint8()
     }
 }
