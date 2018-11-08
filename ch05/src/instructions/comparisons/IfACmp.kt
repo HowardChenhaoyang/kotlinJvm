@@ -4,23 +4,23 @@ import instructions.base.BranchInstruction
 import instructions.base.branch
 import rtda.Frame
 
-class IfAcmpEq : BranchInstruction() {
+class IfACmpEq : BranchInstruction() {
     override fun execute(frame: Frame) {
-        if (acmp(frame)) {
+        if (aCmp(frame)) {
             branch(frame, offset)
         }
     }
 }
 
-class IfAcmpNe : BranchInstruction() {
+class IfACmpNe : BranchInstruction() {
     override fun execute(frame: Frame) {
-        if (!acmp(frame)) {
+        if (!aCmp(frame)) {
             branch(frame, offset)
         }
     }
 }
 
-private fun acmp(frame: Frame): Boolean {
+private fun aCmp(frame: Frame): Boolean {
     val stack = frame.operandStack!!
     return stack.popRef() == stack.popRef()
 }
