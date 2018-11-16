@@ -2,7 +2,7 @@ package classfile
 
 class MemberInfo {
     var constantPool: ConstantPool? = null
-    var accessFlags: Int? = null
+    var accessFlags: Int = 0
     var nameIndex: Int? = null
     var descriptorIndex: Int? = null
     var attributes: Array<AttributeInfo>? = null
@@ -17,6 +17,10 @@ class MemberInfo {
             }
         }
         return null
+    }
+
+    fun constantValueAttribute(): ConstantValueAttribute? {
+        return attributes?.find { it is ConstantValueAttribute } as? ConstantValueAttribute
     }
 }
 

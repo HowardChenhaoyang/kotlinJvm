@@ -8,125 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a22257f7-66b8-40a9-972c-4ef03ec33809" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__8_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_cli_1_4__9_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/ch06.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/libs/commons-cli-1.4-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/libs/commons-cli-1.4-test-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/libs/commons-cli-1.4-tests.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/libs/commons-cli-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/Cmd.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/GaussTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/Interpreter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/AttributeInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/BootstrapMethod.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/ClassFile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/ClassReader.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/ConstantInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/ConstantMemberrefInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/ConstantPool.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/ExceptionTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/InnerClassInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/LineNumberTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/LocalVariableTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/LocalVariableTypeTableEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classfile/NameAndType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/ClassPath.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/CompositeEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/DirEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/Entry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/EntryFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/WildCardEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/classpath/ZipEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/InstructionFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/BranchInstruction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/BranchLogic.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/BytecodeReader.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/Index16Instruction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/Index8Instruction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/Instruction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/base/NoOperandsInstruction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/comparisons/DCmp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/comparisons/FCmp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/comparisons/IfAcmp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/comparisons/IfCond.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/comparisons/IfICmp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/comparisons/LCmp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/AConstNull.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/BIPush.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/DConst0.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/DConst1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/FConst0.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/FConst1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/FConst2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConst0.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConst1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConst2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConst3.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConst4.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConst5.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/IConstM1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/LConst0.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/LConst1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/Nop.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/constants/SIPush.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/control/Goto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/control/LookUpSwitch.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/control/TableSwitch.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/conversions/D2X.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/conversions/F2X.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/conversions/I2X.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/conversions/L2X.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/extended/GotoW.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/extended/IfNull.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/extended/Wide.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/loads/ALoad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/loads/DLoad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/loads/FLoad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/loads/ILoad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/loads/LLoad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Add.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/And.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Div.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/IInc.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Mul.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Neg.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Or.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Rem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Sh.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/Sub.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/math/XOr.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stack/Dup.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stack/Pop.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stack/Swap.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stores/AStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stores/DStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stores/FStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stores/IStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/instructions/stores/LStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/Frame.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/LocalVars.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/OperandStack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/Slot.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/Stack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/Thread.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/AccessFlags.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Class.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Object.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassHierarchy.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassRef.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/SymRef.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/classfile/ConstantInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/classfile/ConstantInfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,17 +32,17 @@
     <session id="970581530">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="10" />
-          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -157,68 +53,119 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="7" />
-          <entry key="kt" value="171" />
+          <entry key="java" value="8" />
+          <entry key="kt" value="214" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="7" />
-          <entry key="Kotlin" value="171" />
+          <entry key="JAVA" value="8" />
+          <entry key="Kotlin" value="214" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="10356" />
+          <entry key="kt" value="14465" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="10356" />
+          <entry key="Kotlin" value="14465" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClassMember.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-              <folding>
-                <element signature="e#19#68#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="535">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassLoader.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassRef.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/SymRef.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Class.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Class.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemberInfo.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/LineNumberTableEntry.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/LocalVariableTableEntry.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/LocalVariableTypeTableEntry.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ConstantInfo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5100">
+              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/classfile/NameAndType.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassHierarchy.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -248,12 +195,16 @@
       <find>FStore</find>
       <find>fun OperandStack.</find>
       <find>import rtda.pushFloat</find>
+      <find>Is</find>
+      <find>Double.fromBits</find>
+      <find>newClassR</find>
     </findStrings>
     <replaceStrings>
       <replace>FStore</replace>
       <replace>IStore</replace>
       <replace>fun</replace>
       <replace />
+      <replace>is</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -269,11 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ch05/src/instructions/comparisons/LCmp.kt" />
-        <option value="$PROJECT_DIR$/ch05/src/instructions/comparisons/FCmp.kt" />
-        <option value="$PROJECT_DIR$/ch05/src/instructions/comparisons/DCmp.kt" />
-        <option value="$PROJECT_DIR$/ch05/src/instructions/base/Branch.kt" />
-        <option value="$PROJECT_DIR$/ch05/src/rtda/Frame.kt" />
         <option value="$PROJECT_DIR$/ch05/src/instructions/comparisons/IfCond.kt" />
         <option value="$PROJECT_DIR$/ch05/src/instructions/comparisons/IfICmp.kt" />
         <option value="$PROJECT_DIR$/ch05/src/instructions/control/Goto.kt" />
@@ -308,18 +254,23 @@
         <option value="$PROJECT_DIR$/ch05/src/GaussTest.java" />
         <option value="$PROJECT_DIR$/ch05/src/instructions/base/BytecodeReader.kt" />
         <option value="$PROJECT_DIR$/ch05/src/Interpreter.kt" />
-        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt" />
-        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt" />
-        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt" />
-        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/heap/AccessFlags.kt" />
-        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Object.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/Slot.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/LocalVars.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/OperandStack.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Class.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ClassHierarchy.kt" />
         <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/classfile/ConstantInfo.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/SymRef.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ClassRef.kt" />
+        <option value="$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt" />
       </list>
     </option>
   </component>
@@ -330,10 +281,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="420" />
-    <option name="y" value="85" />
-    <option name="width" value="1338" />
-    <option name="height" value="827" />
+    <option name="x" value="1861" />
+    <option name="y" value="121" />
+    <option name="width" value="1325" />
+    <option name="height" value="748" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -342,43 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ch06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ch06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ch06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rtda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
-              <item name="ch06" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rtda" type="462c0819:PsiDirectoryNode" />
-              <item name="heap" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
@@ -402,11 +317,54 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="classfile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rtda" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlinJvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlinJvm" type="462c0819:PsiDirectoryNode" />
+              <item name="ch06" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rtda" type="462c0819:PsiDirectoryNode" />
+              <item name="heap" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541555309633" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542159863636" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -439,26 +397,14 @@
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -471,6 +417,9 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="ch05" />
@@ -546,32 +495,7 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" />
       <option name="WORKING_DIRECTORY" />
-      <method>
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -609,6 +533,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
@@ -633,85 +566,65 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="420" y="85" width="1338" height="827" extended-state="0" />
+    <frame x="1861" y="121" width="1325" height="748" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13873734" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" visible="true" weight="0.04931507" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983378" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36879432" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932332" />
+      <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.060185187" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35487804" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Kotlin Bytecode" order="8" weight="0.32813781" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21410993" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74897456" weight="0.36737806" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35487804" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49794915" weight="0.3246951" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.25102544" side_tool="true" visible="true" weight="0.36737806" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74897456" weight="0.36737806" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35487804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932332" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983378" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.25102544" side_tool="true" visible="true" weight="0.05945122" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49794915" weight="0.3246951" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977778" />
+      <window_info anchor="right" id="Kotlin Bytecode" order="8" weight="0.328" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Kotlin Bytecode" order="8" weight="0.3287891" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2423447" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28936172" />
-      <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32911393" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28936172" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35487804" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932332" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32965517" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32983378" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="right" id="Kotlin Bytecode" order="8" weight="0.3287891" />
     </layout-to-restore>
   </component>
   <component name="UnloadedModulesList">
@@ -774,173 +687,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/stack/Dup.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="116" column="40" lean-forward="true" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/math/Rem.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/math/Sh.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/math/XOr.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/com/sun/org/apache/bcel/internal/generic/IFLT.java" />
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/comparisons/IfAcmp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch03/src/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/classfile/ClassFile.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/loads/LLoad.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#28#155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/SIPush.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#32#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/LConst1.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/LConst0.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConstM1.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConst5.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConst4.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConst3.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConst2.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConst1.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch05/src/instructions/constants/IConst0.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -948,9 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,9 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -968,9 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#32#126#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,9 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#32#96#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,9 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,41 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ConstantPool.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ClassFile.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/AccessFlags.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1099,27 +799,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/generated/_Strings.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="117" column="31" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/generated/_Arrays.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="656" column="35" selection-start-line="656" selection-start-column="35" selection-end-line="656" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/generated/_Strings.kt" />
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/generated/_Arrays.kt" />
     <entry file="file://$PROJECT_DIR$/ch06/src/rtda/LocalVars.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
@@ -1148,34 +829,212 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt">
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/generated/_Arrays.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="8224" column="38" selection-start-line="8224" selection-start-column="38" selection-end-line="8224" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Field.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="e#19#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Method.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Slot.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-test-sources.jar!/AssertionsImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classpath/Entry.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classpath/ClassPath.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Class.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/common/kotlin/util/Standard.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="139" column="17" lean-forward="true" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
+          <folding>
+            <element signature="e#19#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ClassReader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ClassFile.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/BootstrapMethod.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/Class.kt">
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/AttributeInfo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state relative-caret-position="230">
+          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassLoader.kt">
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ConstantMemberrefInfo.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassMember.kt">
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ConstantPool.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding>
-            <element signature="e#19#68#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ExceptionTableEntry.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/InnerClassInfo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/LineNumberTableEntry.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/LocalVariableTableEntry.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/LocalVariableTypeTableEntry.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/NameAndType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassHierarchy.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/MemberInfo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/classfile/ConstantInfo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5100">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ClassRef.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/SymRef.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch06/src/rtda/heap/ConstantPool.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
     </entry>

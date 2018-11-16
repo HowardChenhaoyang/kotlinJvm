@@ -4,11 +4,11 @@ import classfile.MemberInfo
 import classfile.descriptor
 import classfile.name
 
-class ClassMember {
+open class ClassMember {
     var accessFlags: Int = 0
     var name: String = ""
     var descriptor: String = ""
-    var clazz: Class? = null
+    lateinit var clazz: Class
     fun copyMemberInfo(memberInfo: MemberInfo) {
         accessFlags = memberInfo.accessFlags
         name = memberInfo.name
@@ -22,11 +22,18 @@ class ClassMember {
     fun isFinal() = 0 != accessFlags and ACC_FINAL
     fun isSynthetic() = 0 != accessFlags and ACC_SYNTHETIC
     fun isAccessibleTo(d: Class): Boolean {
-        if (isPublic()){
+        if (d == clazz) {
             return true
         }
-        if (isProtected()){
-            return d == clazz || d.isS
+        if (isPublic()) {
+            return true
         }
+        if (isProtected()) {
+            return d.isSubClassOf(clazz) || clazz.getPackageName() == d.getPackageName()
+        }
+        if (!isPrivate()) {
+            return clazz.getPackageName() == d.getPackageName()
+        }
+        return false
     }
 }

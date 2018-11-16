@@ -72,8 +72,8 @@ CONSTANT_MethodHandle_info {
 }
 */
 class ConstantMethodHandleInfo : ConstantInfo() {
-    var referenceKind:Short = 0  // 取值范围为0-9
-    var referenceIndex:Int =  -1
+    var referenceKind: Short = 0  // 取值范围为0-9
+    var referenceIndex: Int = -1
     override fun readInfo(classReader: ClassReader) {
         referenceKind = classReader.readU1()
         referenceIndex = classReader.readU2()
@@ -91,7 +91,7 @@ CONSTANT_MethodType_info {
 }
 */
 class ConstantMethodTypeInfo : ConstantInfo() {
-    var descriptorIndex:Int = -1
+    var descriptorIndex: Int = -1
     override fun readInfo(classReader: ClassReader) {
         descriptorIndex = classReader.readU2()
     }
@@ -121,7 +121,6 @@ class ConstantNameAndTypeInfo : ConstantInfo() {
         const val TAG: Short = 12
     }
 }
-
 
 
 /*
@@ -329,6 +328,12 @@ CONSTANT_Double_info {
 class ConstantDoubleInfo : ConstantInfo() {
     var high: Long = 0
     var low: Long = 0
+    val value: Double
+        get() {
+            val longValue = ((high and 0xffffffff) shl 32) or (low and 0xffffffff)
+            return Double.fromBits(longValue)
+        }
+
     override fun readInfo(classReader: ClassReader) {
         high = classReader.readU4()
         low = classReader.readU4()
@@ -383,6 +388,9 @@ CONSTANT_Long_info {
 class ConstantLongInfo : ConstantInfo() {
     var high: Long = 0
     var low: Long = 0
+    val value: Long
+        get() = ((high and 0xffffffff) shl 32) or (low and 0xffffffff)
+
     override fun readInfo(classReader: ClassReader) {
         high = classReader.readU4()
         low = classReader.readU4()
