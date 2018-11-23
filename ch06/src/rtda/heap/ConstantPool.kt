@@ -21,16 +21,18 @@ class ConstantPool {
 
     companion object {
         fun newConstantPool(clazz: Class, cfcp: classFileConstantPool): ConstantPool {
-            val consts = Array(cfcp.size){ Constant() }
+            val consts = Array(cfcp.size) { Constant() }
             val constantPool = ConstantPool().apply {
                 this.clazz = clazz
                 this.consts = consts
             }
-            cfcp.map { mapToConstant(clazz, it) }
+            for ((index, const) in consts.withIndex()) {
+                mapToConstant(cfcp[index], constantPool, const)
+            }
+            return constantPool
         }
 
-        private fun mapToConstant(clazz: Class, constantInfo: ConstantInfo?): Constant {
-            var constant = Constant()
+        private fun mapToConstant(constantInfo: ConstantInfo?, constantPool: ConstantPool, constant: Constant) {
             when (constantInfo) {
                 is ConstantIntegerInfo -> {
                     constant.value = constantInfo.value
@@ -48,9 +50,17 @@ class ConstantPool {
                     constant.value = constantInfo.value
                 }
                 is ConstantClassInfo -> {
-                    constant.value = ClassRef.newClassRef(constantInfo.)
+                    constant.value = ClassRef.newClassRef(constantPool, constantInfo)
                 }
-
+                is ConstantFieldrefInfo -> {
+                    constant.value = FieldRef.newFieldRef(constantPool, constantInfo)
+                }
+                is ConstantMethodrefInfo -> {
+                    constant.value = MethodRef.newMethodRef(constantPool, constantInfo)
+                }
+                is ConstantInterfaceMethodrefInfo -> {
+                    constant.value = InterfaceMethodRef.newInterfaceMethodRef(constantPool, constantInfo)
+                }
             }
         }
     }
