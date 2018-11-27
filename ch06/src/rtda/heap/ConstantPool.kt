@@ -4,9 +4,8 @@ import classfile.*
 
 private typealias classFileConstantPool = classfile.ConstantPool
 
-class Constant {
-    var value: Any? = null
-}
+typealias Constant = Any
+
 
 /**
  * 运行时常量池
@@ -26,42 +25,51 @@ class ConstantPool {
                 this.clazz = clazz
                 this.consts = consts
             }
-            for ((index, const) in consts.withIndex()) {
-                mapToConstant(cfcp[index], constantPool, const)
+            var index = 0
+            while (index < consts.size) {
+                val constantInfo = cfcp[index]
+                when (constantInfo) {
+                    is ConstantIntegerInfo -> {
+                        consts[index] = constantInfo.value
+                        index++
+                    }
+                    is ConstantFloatInfo -> {
+                        consts[index] = constantInfo.value
+                        index++
+                    }
+                    is ConstantLongInfo -> {
+                        consts[index] = constantInfo.value
+                        index++
+                        index++
+                    }
+                    is ConstantDoubleInfo -> {
+                        consts[index] = constantInfo.value
+                        index++
+                        index++
+                    }
+                    is ConstantStringInfo -> {
+                        consts[index] = constantInfo.value
+                        index++
+                    }
+                    is ConstantClassInfo -> {
+                        consts[index] = ClassRef.newClassRef(constantPool, constantInfo)
+                        index++
+                    }
+                    is ConstantFieldrefInfo -> {
+                        consts[index] = FieldRef.newFieldRef(constantPool, constantInfo)
+                        index++
+                    }
+                    is ConstantMethodrefInfo -> {
+                        consts[index] = MethodRef.newMethodRef(constantPool, constantInfo)
+                        index++
+                    }
+                    is ConstantInterfaceMethodrefInfo -> {
+                        consts[index] = InterfaceMethodRef.newInterfaceMethodRef(constantPool, constantInfo)
+                        index++
+                    }
+                }
             }
             return constantPool
-        }
-
-        private fun mapToConstant(constantInfo: ConstantInfo?, constantPool: ConstantPool, constant: Constant) {
-            when (constantInfo) {
-                is ConstantIntegerInfo -> {
-                    constant.value = constantInfo.value
-                }
-                is ConstantFloatInfo -> {
-                    constant.value = constantInfo.value
-                }
-                is ConstantLongInfo -> {
-                    constant.value = constantInfo.value
-                }
-                is ConstantDoubleInfo -> {
-                    constant.value = constantInfo.value
-                }
-                is ConstantStringInfo -> {
-                    constant.value = constantInfo.value
-                }
-                is ConstantClassInfo -> {
-                    constant.value = ClassRef.newClassRef(constantPool, constantInfo)
-                }
-                is ConstantFieldrefInfo -> {
-                    constant.value = FieldRef.newFieldRef(constantPool, constantInfo)
-                }
-                is ConstantMethodrefInfo -> {
-                    constant.value = MethodRef.newMethodRef(constantPool, constantInfo)
-                }
-                is ConstantInterfaceMethodrefInfo -> {
-                    constant.value = InterfaceMethodRef.newInterfaceMethodRef(constantPool, constantInfo)
-                }
-            }
         }
     }
 }
