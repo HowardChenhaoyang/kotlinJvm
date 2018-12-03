@@ -15,6 +15,10 @@ class Method : ClassMember() {
         }
     }
 
+
+    operator fun component1() = maxStack
+    operator fun component2() = maxLocals
+
     fun isSynchronized() = 0 != accessFlags and ACC_SYNCHRONIZED
     fun isBridge() = 0 != accessFlags and ACC_BRIDGE
     fun isVarargs() = 0 != accessFlags and ACC_VARARGS

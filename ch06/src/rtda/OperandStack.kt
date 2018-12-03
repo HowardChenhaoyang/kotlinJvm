@@ -52,7 +52,7 @@ class OperandStack {
         size++
     }
 
-    fun popRef(): Any? {
+    fun popRef(): Object? {
         size--
         val ref = slots[size].ref
         slots[size].ref = null

@@ -131,19 +131,19 @@ class ClassLoader {
         if (constValueIndex > 0) {
             when (field.descriptor) {
                 "Z", "B", "C", "S", "I" -> {
-                    val value = constantPool!!.getConstant(constValueIndex).value as Int
+                    val value = constantPool!!.getConstant(constValueIndex) as Int
                     staticVars!!.setInt(slotId, value)
                 }
                 "J" -> {
-                    val value = constantPool!!.getConstant(constValueIndex).value as Long
+                    val value = constantPool!!.getConstant(constValueIndex) as Long
                     staticVars!!.setLong(slotId, value)
                 }
                 "F" -> {
-                    val value = constantPool!!.getConstant(constValueIndex).value as Float
+                    val value = constantPool!!.getConstant(constValueIndex) as Float
                     staticVars!!.setFloat(slotId, value)
                 }
                 "D" -> {
-                    val value = constantPool!!.getConstant(constValueIndex).value as Double
+                    val value = constantPool!!.getConstant(constValueIndex) as Double
                     staticVars!!.setDouble(slotId, value)
                 }
                 "Ljava/lang/String;" -> {

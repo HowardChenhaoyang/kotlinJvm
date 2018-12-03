@@ -52,7 +52,7 @@ fun Slots.getDouble(index: Int): Double {
     return Double.fromBits(getLong(index))
 }
 
-fun Slots.setRef(index: Int, ref: Object) {
+fun Slots.setRef(index: Int, ref: Object?) {
     this[index].ref = ref
 }
 
