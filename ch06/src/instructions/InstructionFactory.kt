@@ -13,6 +13,7 @@ import instructions.extended.IfNull
 import instructions.extended.Wide
 import instructions.loads.*
 import instructions.math.*
+import instructions.references.*
 import instructions.stack.*
 import instructions.stores.*
 
@@ -38,6 +39,9 @@ class InstructionFactory {
                 0x0f -> DConst1()
                 0x10 -> BIPush()
                 0x11 -> SIPush()
+                0x12 -> LDC()
+                0x13 -> LDC_W()
+                0x14 -> LDC2_W()
                 0x15 -> ILoad()
                 0x16 -> LLoad()
                 0x17 -> FLoad()
@@ -143,6 +147,7 @@ class InstructionFactory {
                 0x8b -> F2I()
                 0x8c -> F2L()
                 0x8d -> F2D()
+                0x8e -> D2I()
                 0x8f -> D2L()
                 0x90 -> D2F()
                 0x91 -> I2B()
@@ -170,6 +175,15 @@ class InstructionFactory {
                 0xa7 -> Goto()
                 0xaa -> TableSwitch()
                 0xab -> LookUpSwitch()
+                0xb2 -> GetStatic()
+                0xb3 -> PutStatic()
+                0xb4 -> GetField()
+                0xb5 -> PutField()
+                0xb6 -> Invokevirtual()
+                0xb7 -> Invokespecial()
+                0xbb -> New()
+                0xc0 -> CheckCast()
+                0xc1 -> InstanceOf()
                 0xc4 -> Wide()
                 0xc6 -> IfNull()
                 0xc7 -> IfNonNull()

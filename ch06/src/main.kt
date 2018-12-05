@@ -1,8 +1,5 @@
-import classfile.ClassFile
-import classfile.MemberInfo
-import classfile.descriptor
-import classfile.name
 import classpath.ClassPath
+import rtda.heap.ClassLoader
 
 fun main(args: Array<String>) {
     val cmd = Cmd.parseCmd(args)
@@ -16,18 +13,15 @@ fun main(args: Array<String>) {
 }
 
 fun startJVM(cmd: Cmd) {
-    val result = ClassPath.parse(cmd).readClass(cmd.clazz!!)
-    val classFile = ClassFile.parse(result.bytes)
-    val mainMethodMemberInfo = getMainMethod(classFile)?:return
-    Interpreter.interpret(mainMethodMemberInfo)
-}
+    val classPath = ClassPath.parse(cmd)
+    val classLoader = ClassLoader.newClassLoader(classPath)
+    val className = cmd.clazz!!
+    val mainClass = classLoader.loadClass(className)
+    val mainMethod = mainClass.getMainMethod()
 
-private fun getMainMethod(classFile: ClassFile): MemberInfo? {
-    val methods = classFile.methods ?: return null
-    for (method in methods) {
-        if (method.name == "main" && method.descriptor == "([Ljava/lang/String;)V") {
-            return method
-        }
+    if (mainMethod == null){
+        println("Main method not found in class $mainClass")
+    }else{
+        Interpreter.interpret(mainMethod)
     }
-    return null
 }

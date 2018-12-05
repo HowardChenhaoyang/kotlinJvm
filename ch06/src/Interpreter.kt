@@ -1,29 +1,16 @@
-import classfile.MemberInfo
 import instructions.InstructionFactory
 import instructions.base.BytecodeReader
 import rtda.Frame
 import rtda.Thread
+import rtda.heap.Method
 
 class Interpreter {
     companion object {
-        fun interpret(memberInfo: MemberInfo) {
-            val codeAttr = memberInfo.codeAttribute() ?: return
-            val maxLocals = codeAttr.maxLocals
-            val maxStack = codeAttr.maxStack
-            val byteCode = codeAttr.code
+        fun interpret(method: Method) {
             val thread = Thread.newThread()
-            val frame = Frame.newFrame(thread, maxLocals, maxStack)
+            val frame = Frame.newFrame(thread, method)
             thread.pushFrame(frame)
-            try {
-                loop(thread, byteCode!!)
-            } catch (e: Exception) {
-                for (localVar in frame.localVars!!) {
-                    println("localVars ${localVar.num}")
-                }
-                for (slot in frame.operandStack?.slots!!) {
-                    println("operandStack ${slot.num}")
-                }
-            }
+            loop(thread, method.code!!)
         }
 
         private fun loop(thread: Thread, byteCode: ByteArray) {

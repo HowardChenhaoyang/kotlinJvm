@@ -87,6 +87,7 @@ class ClassLoader {
                 }
             }
         }
+        clazz.instanceSlotCount = slotId
     }
 
     private fun calcStaticFieldSlotIds(clazz: Class) {

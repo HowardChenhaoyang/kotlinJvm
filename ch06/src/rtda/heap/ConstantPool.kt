@@ -67,6 +67,7 @@ class ConstantPool {
                         consts[index] = InterfaceMethodRef.newInterfaceMethodRef(constantPool, constantInfo)
                         index++
                     }
+                    else -> index++
                 }
             }
             return constantPool

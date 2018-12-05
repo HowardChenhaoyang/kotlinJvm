@@ -351,9 +351,9 @@ CONSTANT_Float_info {
 }
 */
 class ConstantFloatInfo : ConstantInfo() {
-    var value: Long = 0
+    var value: Float = 0f
     override fun readInfo(classReader: ClassReader) {
-        value = classReader.readU4()
+        value = Float.fromBits(classReader.readU4().toInt())
     }
 
     companion object {
@@ -368,9 +368,9 @@ CONSTANT_Integer_info {
 }
 */
 class ConstantIntegerInfo : ConstantInfo() {
-    var value: Long = 0
+    var value: Int = 0
     override fun readInfo(classReader: ClassReader) {
-        value = classReader.readU4()
+        value = classReader.readU4().toInt()
     }
 
     companion object {
