@@ -16,12 +16,24 @@ class InterfaceMethodRef : MemberRef() {
 
     fun resolvedInterfaceMethod(): Method {
         if (method == null) {
-            _resolveInterfaceMethodRef()
+            resolveInterfaceMethodRefInternal()
         }
         return method!!
     }
 
-    private fun _resolveInterfaceMethodRef() {
-        // TODO
+    private fun resolveInterfaceMethodRefInternal() {
+        val selfClass = cp!!.clazz
+        val refrenceClass = resolvedClass()
+        if (!refrenceClass.isInterface()) {
+            throw IncompatibleClassChangeError()
+        }
+        val method = lookupInterfaceMethod(refrenceClass, name, descriptor) ?: throw NoSuchMethodError()
+        if (!method.isAccessibleTo(selfClass)) {
+            throw IllegalAccessError()
+        }
+        this.method = method
     }
+
+    private fun lookupInterfaceMethod(iface: Class, name: String, descriptor: String) = iface.methods?.find { it.name == name && it.descriptor == descriptor }
+            ?: lookupMethodInInterfaces(iface.interfaces, name, descriptor)
 }
