@@ -301,7 +301,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="694" />
     <option name="y" value="156" />
     <option name="width" value="1391" />
@@ -713,6 +713,7 @@
     <module name="ch03" />
     <module name="ch04" />
     <module name="ch05" />
+    <module name="ch06" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
