@@ -1,12 +1,13 @@
 package rtda.heap
 
 import classfile.MemberInfo
+import instructions.base.MethodDescriptorParse
 
 class Method : ClassMember() {
     var maxStack = 0
     var maxLocals = 0
     var code: ByteArray? = null
-
+    var argSlotCount: Int = 0
     private fun copyAttributes(memberInfo: MemberInfo) {
         memberInfo.codeAttribute()?.let {
             maxStack = it.maxStack
@@ -15,6 +16,18 @@ class Method : ClassMember() {
         }
     }
 
+    private fun calcArgSlotCount() {
+        val parsedDescriptor = MethodDescriptorParse.parseMethodDescriptor(descriptor)
+        parsedDescriptor.parameterTypes?.forEach {
+            argSlotCount++
+            if (it == "J" || it == "D") {
+                argSlotCount++
+            }
+        }
+        if (!isStatic()) {
+            argSlotCount++
+        }
+    }
 
     operator fun component1() = maxStack
     operator fun component2() = maxLocals
@@ -27,12 +40,13 @@ class Method : ClassMember() {
     fun isStrict() = 0 != accessFlags and ACC_STRICT
 
     companion object {
-        fun newMethod(clazz: Class, cfMethods: Array<MemberInfo>): Array<Method> {
+        fun newMethods(clazz: Class, cfMethods: Array<MemberInfo>): Array<Method> {
             return cfMethods.map {
                 Method().apply {
                     this.clazz = clazz
                     this.copyMemberInfo(it)
                     this.copyAttributes(it)
+                    this.calcArgSlotCount()
                 }
             }.toTypedArray()
         }

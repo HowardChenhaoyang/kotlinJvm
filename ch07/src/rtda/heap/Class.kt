@@ -63,7 +63,7 @@ class Class {
                     fields = Field.newFields(this, cf.fields!!)
                 }
                 if (cf.methods != null) {
-                    methods = Method.newMethod(this, cf.methods!!)
+                    methods = Method.newMethods(this, cf.methods!!)
                 }
             }
             return clazz

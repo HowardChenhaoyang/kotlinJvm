@@ -1,5 +1,7 @@
 package rtda
 
+import rtda.heap.Method
+
 class Thread {
     var pc: Int = -1
     lateinit var stack: Stack
@@ -8,9 +10,13 @@ class Thread {
         stack.push(frame)
     }
 
+    fun newFrame(method: Method):Frame{
+        return Frame.newFrame(this, method)
+    }
+
     fun popFrame(): Frame = stack.pop()
 
-    fun currentFrame() = stack.top()
+    fun topFrame() = stack.top()
 
     companion object {
         fun newThread(): Thread {

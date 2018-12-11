@@ -19,7 +19,7 @@ fun LocalVars.setInt(index: Int, value: Int) {
     this[index].num = value
 }
 
-fun LocalVars.getInt(index: Int):Int = this[index].num!!
+fun LocalVars.getInt(index: Int): Int = this[index].num!!
 
 fun LocalVars.setFloat(index: Int, value: Float) {
     this[index].num = value.toBits()
@@ -49,3 +49,7 @@ fun LocalVars.setRef(index: Int, ref: Object?) {
 }
 
 fun LocalVars.getRef(index: Int) = this[index].ref
+
+fun LocalVars.setSlot(index: Int, slot: Slot) {
+    this[index] = slot
+}
