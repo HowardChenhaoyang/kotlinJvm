@@ -4,7 +4,7 @@ import instructions.base.Index16Instruction
 import rtda.Frame
 import rtda.heap.MethodRef
 
-class Invokevirtual : Index16Instruction() {
+class InvokeVirtual : Index16Instruction() {
     override fun execute(frame: Frame) {
         val cp = frame.method!!.clazz.constantPool!!
         val methodRef = cp.getConstant(index) as MethodRef

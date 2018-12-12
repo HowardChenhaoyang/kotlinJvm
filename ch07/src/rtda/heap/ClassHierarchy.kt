@@ -11,6 +11,10 @@ fun Class.isSubClassOf(other: Class): Boolean {
     return false
 }
 
+fun Class.isSuperClassOf(other: Class): Boolean {
+    return other.isSubClassOf(this)
+}
+
 fun Class.isAssignableFrom(other: Class): Boolean {
     if (this == other) return true
     return if (this.isInterface()) {

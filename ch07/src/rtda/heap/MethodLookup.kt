@@ -1,6 +1,7 @@
 package rtda.heap
 
-fun lookupMethodInClass(clazz: Class, name: String, descriptor: String): Method? {
+fun lookupMethodInClass(clazz: Class?, name: String, descriptor: String): Method? {
+    clazz ?: return null
     var loopingClass: Class? = clazz
     while (loopingClass != null) {
         val method = loopingClass.methods?.find { it.name == name && it.descriptor == descriptor }

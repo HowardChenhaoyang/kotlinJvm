@@ -64,9 +64,13 @@ class OperandStack {
         size++
     }
 
-    fun popSlot():Slot {
+    fun popSlot(): Slot {
         size--
         return slots[size]
+    }
+
+    fun getRefFromTop(n: Int): Object? {
+        return slots[size - 1 - n].ref
     }
 
 
