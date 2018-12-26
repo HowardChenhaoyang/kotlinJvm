@@ -17,6 +17,7 @@ class Stack {
         val top = top
         this.top = top!!.next
         top.next = null
+        size--
         return top
     }
 

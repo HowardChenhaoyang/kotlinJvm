@@ -20,6 +20,8 @@ class Class {
     var instanceSlotCount: Int = 0
     var staticSlotCount: Int = 0
     var staticVars: Slots? = null
+    var initStarted: Boolean = false
+        private set
 
     fun isPublic() = 0 != accessFlags and ACC_PUBLIC
     fun isSuper() = 0 != accessFlags and ACC_FINAL
@@ -40,6 +42,14 @@ class Class {
 
     fun getStaticMethod(name: String, descriptor: String): Method? {
         return methods?.find { method -> method.isStatic() && method.name == name && method.descriptor == descriptor }
+    }
+
+    fun startInit() {
+        initStarted = true
+    }
+
+    fun getClinitMethod(): Method? {
+        return getStaticMethod("<clinit>", "()V")
     }
 
     fun getPackageName(): String {

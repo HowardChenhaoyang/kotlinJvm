@@ -11,6 +11,10 @@ class Frame {
     var nextPc: Int = 0
     var method: Method? = null
 
+    fun revertNextPC(){
+        nextPc = thread.pc
+    }
+
     companion object {
         fun newFrame(thread: Thread, method: Method): Frame {
             val (maxStack, maxLocals) = method

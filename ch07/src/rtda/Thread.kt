@@ -18,6 +18,8 @@ class Thread {
 
     fun topFrame() = stack.top()
 
+    fun isStackEmpty() = stack.size == 0
+
     companion object {
         fun newThread(): Thread {
             return Thread().apply {

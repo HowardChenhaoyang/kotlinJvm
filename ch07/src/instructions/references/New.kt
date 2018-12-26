@@ -1,6 +1,7 @@
 package instructions.references
 
 import instructions.base.Index16Instruction
+import instructions.base.initClass
 import rtda.Frame
 import rtda.heap.ClassRef
 
@@ -9,7 +10,10 @@ class New : Index16Instruction() {
         val cp = frame.method!!.clazz.constantPool!!
         val classRef = cp.getConstant(index) as ClassRef
         val clazz = classRef.resolvedClass()
-        // todo: init class
+        if (!clazz.initStarted){
+            frame.revertNextPC()
+            initClass(frame.thread, clazz)
+        }
         if (clazz.isInterface() || clazz.isAbstract()) {
             throw InstantiationError()
         }

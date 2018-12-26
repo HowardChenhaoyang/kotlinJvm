@@ -14,9 +14,9 @@ class Interpreter {
         }
 
         private fun loop(thread: Thread, byteCode: ByteArray) {
-            val frame = thread.popFrame()
             val reader = BytecodeReader()
             while (true) {
+                val frame = thread.topFrame()
                 val pc = frame.nextPc
                 thread.pc = pc
                 reader.reset(byteCode, pc)
@@ -25,6 +25,9 @@ class Interpreter {
                 instruction.fetchOperands(reader)
                 frame.nextPc = reader.pc
                 instruction.execute(frame)
+                if (thread.isStackEmpty()) {
+                    break
+                }
             }
         }
     }

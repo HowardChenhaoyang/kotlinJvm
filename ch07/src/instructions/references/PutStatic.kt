@@ -1,6 +1,7 @@
 package instructions.references
 
 import instructions.base.Index16Instruction
+import instructions.base.initClass
 import rtda.Frame
 import rtda.heap.*
 
@@ -12,6 +13,10 @@ class PutStatic : Index16Instruction() {
         val fieldRef = cp.getConstant(index) as FieldRef
         val field = fieldRef.resolvedField()
         val clazz = field.clazz
+        if (!clazz.initStarted){
+            frame.revertNextPC()
+            initClass(frame.thread, clazz)
+        }
         if (!field.isStatic()) {
             throw IncompatibleClassChangeError()
         }
